@@ -1,6 +1,6 @@
 import "./App.css";
 
-import InputFile from "./components/inputFile";
+import InputFile from "./components/InputFile";
 import Navbar from "./components/Navbar";
 import IngredientList from "./components/IngredientList";
 import { useState } from "react";
