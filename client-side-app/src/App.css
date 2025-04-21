@@ -1,5 +1,5 @@
 body {
   min-height: 100vh;
-  background-color: rgba(166, 145, 92, 1);
-  overflow-x: hidden;
+  width: 100%;
+  background-color: #1a1a19;
 }
