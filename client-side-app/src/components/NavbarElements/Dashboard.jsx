@@ -56,9 +56,11 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className="bg-white flex justify-center items-center rounded-md sm:h-[80px] sm:w-[120px] md:h-[80px] md:w-[180px] float-end lg:mt-10 sm:mt-3  mr-4 font-serif  mouse-pointer  ">
-        <div className="text-xl">
-          <button onClick={(e) => handleClick(e)}>Create Post</button>
+      <div className=" flex justify-center items-center rounded-md sm:h-[80px] w-[100%]  md:h-[80px] md:w-[180px] sm:mt-10 md:float-end lg:mt-10   mr-4 font-serif  mouse-pointer  ">
+        <div className=" bg-white  rounded-md  p-2 text-xl flex justify-center">
+          <button className="p-2 " onClick={(e) => handleClick(e)}>
+            Create Post
+          </button>
         </div>
       </div>
 
