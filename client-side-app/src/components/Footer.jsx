@@ -5,21 +5,24 @@ import {
   faFacebook,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
-
+import { Link } from "react-router-dom";
+import { SignIn } from "./NavbarElements/SignIn";
 export default function Footer() {
   return (
     <>
-      <footer className="w-screen h-auto m-0 p-0 text-start mb-0 mt-10">
+      <footer
+        id="footer"
+        className="contact w-screen h-[400px]   p-0 text-start mb-0 mt-16 font-sans grid grid-rows-2"
+      >
         <div
-          className="bg-[#4d361c] h-60 grid grid-cols-3   text-white  p-14 justify-center align-bottom text-sm
+          className="bg-[#7d593c]  grid grid-cols-3  text-white  p-8 sm:p-12 justify-center align-bottom text-sm
         "
         >
-          <div className="grid grid-rows-3 ">
-            <a href="#about">About</a>
-            <a href="#cookbook">CookBook</a>
-            <a href="#recipes">Recipes</a>
+          <div className="grid grid-rows-4 text-sm sm:text-lg   ">
+            <Link to="/">About</Link>
+            <Link to="/recipe">Recipes</Link>
           </div>
-          <div className="grid grid-rows-3 ">
+          <div className="grid grid-rows-2 sm:grid-rows-3">
             <p className="text-lg">Contact Us</p>
 
             <p>XYZ Road ,Punjab ,140708</p>
@@ -29,7 +32,7 @@ export default function Footer() {
               <p>Phone: +1 123-454-7890</p>
             </div>
           </div>
-          <div className="grid grid-cols-4 items-center text-2xl">
+          <div className="grid grid-rows-4 ml-16 grid-cols-1 items-center text-lg sm:text-2xl sm:grid-cols-4 ">
             <a href="https://www.linkedin.com/in/isha-chaudhary-8273b1286">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
@@ -38,13 +41,15 @@ export default function Footer() {
             </a>
             <FontAwesomeIcon icon={faFacebook} />
             <a href="https://x.com/ishiefisshie">
-              {" "}
               <FontAwesomeIcon icon={faTwitter} />
             </a>
           </div>
         </div>
-        <div className="bg-[#72562b] h-20 p-5 text-white text-center">
+        <div className="bg-[#583f2b]  pl-5 pr-5 pt-5 flex justify-center items-center  text-white text-center">
           <div>
+            <p className="mb-8">
+              From our kitchen to yours {"-"}happy cooking!
+            </p>
             <p className="pb-1 text-sm">
               &copy; 2025 Isha's company | <a href="/privacy">Privacy Policy</a>{" "}
               | <a href="/terms">Terms of Service</a>
