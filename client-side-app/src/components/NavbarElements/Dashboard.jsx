@@ -82,6 +82,7 @@ export default function Dashboard() {
                       ? recipe.recipeUserId.picture
                       : dummyProfile
                   }
+                  // due to slow internet it will not able to load
                   onError={(e) => {
                     e.target.onerror = null;
                     e.target.src = dummyProfile;
