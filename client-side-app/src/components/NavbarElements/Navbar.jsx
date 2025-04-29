@@ -6,6 +6,7 @@ import { SignIn } from "./SignIn";
 export default function Navbar() {
   return (
     <>
+      //some changes
       <div className="flex h-20 w-[100vw] bg-white text-black font-serif  rounded-bl-sm font-normal shadow-[0_1px_3px_0_rgba(0,0,0,0.1),0_1px_2px_0_rgba(0,0,0,0.05),0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.8)] ">
         <div className="flex  justify-start items-center text-justify   ml-3 p-2 text-2xl h-20 w-full">
           <img className="w-10 h-10 mr-2" src={chefIcon} alt="" />
@@ -38,7 +39,6 @@ export default function Navbar() {
           >
             Contact
           </a> */}
-
           <SignIn />
         </div>
       </div>
