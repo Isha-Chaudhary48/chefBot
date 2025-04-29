@@ -69,7 +69,7 @@ export default function UserAllRecipesSection() {
           {particularUserRecipes.map((recipe) => (
             <div
               key={recipe._id}
-              className="flex justify-center flex-col bg-white gap-7 p-10 mt-10 w-[80%] rounded-lg font-serif"
+              className="flex justify-center flex-col bg-white gap-7 p-10 mt-10 w-[60%] rounded-lg font-serif"
               onClick={() => navigateOnClick(recipe)}
             >
               <div className="flex justify-normal items-end mt-[-20px]">
