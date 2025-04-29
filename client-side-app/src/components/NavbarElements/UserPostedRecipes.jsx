@@ -22,7 +22,7 @@ export default function UserPostedRecipes() {
   return (
     <>
       <div className="flex justify-center items-center mt-10">
-        <div className="bg-white  sm:flex sm:flex-col  p-4 rounded-lg lg:grid lg:grid-cols-2  justify-center w-[90%]  ">
+        <div className="bg-white  sm:flex sm:flex-col  p-4 rounded-lg lg:grid lg:grid-cols-2  justify-center w-[80%]  ">
           <div
             className="flex justify-start items-center gap-2 cursor-pointer"
             onClick={() => {
