@@ -16,9 +16,13 @@ export default function Navbar() {
 
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
           {isOpen ? (
-            <X size={24} className="z-50 bg-black" />
+            <X
+              onClick={() => setIsOpen(isOpen)}
+              size={24}
+              className="z-50  text-white  absolute right-3 top-[12px]"
+            />
           ) : (
-            <Menu size={24} className="mr-[145px]" />
+            <Menu size={24} className="mr-[75px]" />
           )}
         </button>
         <div className=" hidden md:flex justify-end  items-center  gap-2  sm:gap-8 h-20 w-full sm:pr-20">
@@ -44,22 +48,22 @@ export default function Navbar() {
           <SignIn />
         </div>
         {isOpen && (
-          <div className=" top-0 absolute right-0 h-auto w-[20%] bg-[#4d361c] text-white shadow-lg flex flex-col items-center justify-center gap-8 z-40 md:hidden pt-10 pb-10    ">
+          <div className=" top-0 absolute right-0 h-auto w-[20%]  text-white shadow-lg flex flex-col items-center justify-center gap-8  md:hidden pt-10 pb-10 p-20 rounded-l-3xl bg-[#583f2b]   ">
             <Link
               to="/dashboard"
-              className="relative  hover:text-gray-800 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full"
+              className="relative  hover:text-[#fab668] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full pt-2"
             >
               Dashboard
             </Link>
             <Link
               to="/chefBot"
-              className="relative  hover:text-gray-800 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full"
+              className="relative  hover:text-[#fab668] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full"
             >
               ChefBot
             </Link>
             <Link
               to="/recipe"
-              className="relative  hover:text-gray-800 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full"
+              className="relative  hover:text-[#fab668] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full"
             >
               Recipes
             </Link>

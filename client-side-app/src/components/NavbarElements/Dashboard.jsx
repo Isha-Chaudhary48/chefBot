@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import dummyProfile from "../../assets/dummyProfile.png";
-import LikeShareComment from "../LikeShareCommentSection/LikeShareComment";
 
 export default function Dashboard() {
   const { user, isAuthenticated } = useAuth0();
@@ -57,7 +56,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className=" flex justify-center items-center rounded-md sm:h-[80px] w-[100%]  md:h-[80px] md:w-[180px] sm:mt-10 md:float-end lg:mt-10   mr-4 font-serif  mouse-pointer  ">
+      <div className=" flex justify-center items-center rounded-md sm:h-[80px] w-[100%]  md:h-[80px] md:w-[180px] sm:mt-10 md:float-end lg:mt-10   mr-4 font-serif  mouse-pointer   ">
         <div className=" bg-white  rounded-md  p-2 text-xl flex justify-center">
           <button className="p-2 " onClick={(e) => handleClick(e)}>
             Create Post
@@ -65,7 +64,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center flex-col gap-20  mt-10 gap- lg:mt-10 p-4 ">
+      <div className="flex justify-center items-center flex-col gap-20  mt-24 gap- lg:mt-10 p-4 ">
         {!userInfo ? (
           <div className="text-white text-xl ">Loading...</div>
         ) : (
@@ -130,7 +129,6 @@ export default function Dashboard() {
                     — {recipe.authorName}
                   </h1>
                 </div>
-                <LikeShareComment />
               </div>
             </div>
           ))

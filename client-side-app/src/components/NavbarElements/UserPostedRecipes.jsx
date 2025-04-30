@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import profilePicture from "../../assets/profilePicture.png";
-import LikeShareComment from "../LikeShareCommentSection/LikeShareComment";
 
 export default function UserPostedRecipes() {
   const navigate = useNavigate();
@@ -22,7 +21,7 @@ export default function UserPostedRecipes() {
   }
   return (
     <>
-      <div className="flex justify-center items-center mt-10">
+      <div className="flex justify-center items-center ">
         <div className="bg-white  sm:flex sm:flex-col  p-4 rounded-lg lg:grid lg:grid-cols-2  justify-center w-[80%]  ">
           <div
             className="flex justify-start items-center gap-2 cursor-pointer"
@@ -84,7 +83,6 @@ export default function UserPostedRecipes() {
             </h2>
             <h1 className="flex justify-end mr-9">— {recipe.authorName}</h1>
           </div>
-          <LikeShareComment />
         </div>
       </div>
     </>

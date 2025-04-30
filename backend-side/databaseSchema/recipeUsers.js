@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import User from "./user.js";
+
 const recipeUserSchema = new mongoose.Schema(
   {
     authorName: {

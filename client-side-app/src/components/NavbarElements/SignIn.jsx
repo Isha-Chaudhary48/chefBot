@@ -36,24 +36,30 @@ export function SignIn() {
 
   return (
     <>
-      {isAuthenticated ? (
-        <button
-          className="relative text-gray-600 hover:text-gray-800 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full"
-          onClick={(e) => logout(e)}
-        >
-          Logout
-        </button>
-      ) : (
-        <button
-          className="relative text-gray-600 hover:text-gray-800 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full"
-          onClick={(e) => loginWithRedirect(e)}
-        >
-          SignIn
-        </button>
-      )}
-      {isAuthenticated && user && (
-        <img className="h-10 rounded-[50%]" src={user.picture} alt="" />
-      )}
+      <div className="flex flex-col md:flex-row ">
+        {isAuthenticated ? (
+          <button
+            className="relative sm:text-white sm:hover:text-[#fab668]  md:text-gray-600 md:hover:text-gray-800 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full"
+            onClick={(e) => logout(e)}
+          >
+            Logout
+          </button>
+        ) : (
+          <button
+            className="relative sm: text-white sm:hover:text-[#fab668] md:text-gray-600 md:hover:text-gray-800 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full"
+            onClick={(e) => loginWithRedirect(e)}
+          >
+            SignIn
+          </button>
+        )}
+        {isAuthenticated && user && (
+          <img
+            className="h-12 rounded-[50%] z-50 bg-white mt-4 md:ml-4 md:mt-0"
+            src={user.picture}
+            alt="hello "
+          />
+        )}
+      </div>
     </>
   );
 }

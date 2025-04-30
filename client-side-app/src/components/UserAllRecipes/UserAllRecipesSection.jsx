@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import dummyProfile from "../../assets/dummyProfile.png";
-import LikeShareComment from "../LikeShareCommentSection/LikeShareComment";
 
 export default function UserAllRecipesSection() {
   const location = useLocation();
@@ -46,7 +45,6 @@ export default function UserAllRecipesSection() {
         </div>
       ) : (
         <>
-          {/* ✅ SHOW PROFILE ONCE AT THE TOP */}
           {user && (
             <div className=" p-4 mt-4 rounded-md shadow-md flex flex-col items-center">
               <img
@@ -66,11 +64,10 @@ export default function UserAllRecipesSection() {
             </div>
           )}
 
-          {/* ✅ SHOW RECIPES BELOW */}
           {particularUserRecipes.map((recipe) => (
             <div
               key={recipe._id}
-              className="flex justify-center flex-col bg-white gap-7 p-10 mt-10 w-[60%] rounded-lg font-serif"
+              className="flex justify-center flex-col bg-white gap-7 p-10 mt-10 sm:w-[70%] md:w-[60%]  rounded-lg font-serif"
               onClick={() => navigateOnClick(recipe)}
             >
               <div className="flex justify-normal items-end mt-[-20px]">
@@ -87,7 +84,7 @@ export default function UserAllRecipesSection() {
               <div className="flex justify-center items-center">
                 <img
                   src={recipe.recipeUrl}
-                  className="h-[300px] w-[300px] m-6 md:h-[400px] md:w-[400px] rounded-md"
+                  className="h-[400px] w-[400px] m-6 md:h-[400px] md:w-[400px] rounded-md"
                   alt={recipe.recipeName}
                 />
               </div>
@@ -96,7 +93,6 @@ export default function UserAllRecipesSection() {
               <div className="flex justify-end items-end">
                 <h1> — {recipe.authorName}</h1>
               </div>
-              <LikeShareComment />
             </div>
           ))}
         </>
