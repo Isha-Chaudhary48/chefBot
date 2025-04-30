@@ -15,11 +15,12 @@ export default function Footer() {
         className="contact w-screen h-[400px]   p-0 text-start mb-0 mt-16 font-sans grid grid-rows-2"
       >
         <div
-          className="bg-[#7d593c]  grid grid-cols-3  text-white  p-8 sm:p-12 justify-center align-bottom text-sm
+          className="bg-[#8c6240]  grid grid-cols-3  text-white  p-8 sm:p-12 justify-center align-bottom text-sm
         "
         >
           <div className="grid grid-rows-4 text-sm sm:text-lg   ">
-            <Link to="/">About</Link>
+            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/chefBot">ChefBot</Link>
             <Link to="/recipe">Recipes</Link>
           </div>
           <div className="grid grid-rows-2 sm:grid-rows-3">
