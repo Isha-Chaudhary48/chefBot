@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import dummyProfile from "../../assets/dummyProfile.png";
+import LikeShareComment from "../LikeShareCommentSection/LikeShareComment";
 
 export default function Dashboard() {
   const { user, isAuthenticated } = useAuth0();
@@ -129,6 +130,7 @@ export default function Dashboard() {
                     — {recipe.authorName}
                   </h1>
                 </div>
+                <LikeShareComment />
               </div>
             </div>
           ))
