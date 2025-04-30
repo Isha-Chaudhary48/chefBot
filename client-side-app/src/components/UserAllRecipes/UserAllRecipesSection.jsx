@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import dummyProfile from "../../assets/dummyProfile.png";
+import LikeShareComment from "../LikeShareCommentSection/LikeShareComment";
 
 export default function UserAllRecipesSection() {
   const location = useLocation();
@@ -95,6 +96,7 @@ export default function UserAllRecipesSection() {
               <div className="flex justify-end items-end">
                 <h1> — {recipe.authorName}</h1>
               </div>
+              <LikeShareComment />
             </div>
           ))}
         </>
