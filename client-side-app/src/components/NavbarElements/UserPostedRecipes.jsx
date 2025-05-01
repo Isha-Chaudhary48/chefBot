@@ -22,7 +22,7 @@ export default function UserPostedRecipes() {
   return (
     <>
       <div className="flex justify-center items-center ">
-        <div className="bg-white  sm:flex sm:flex-col  p-4 rounded-lg lg:grid lg:grid-cols-2  justify-center w-[80%]  ">
+        <div className="bg-white  sm:flex sm:flex-col  p-4 rounded-lg   justify-center w-[80%]  ">
           <div
             className="flex justify-start items-center gap-2 cursor-pointer"
             onClick={() => {
@@ -43,11 +43,11 @@ export default function UserPostedRecipes() {
               }}
               className="rounded-full h-12 w-12 "
             />
-            <h1>{recipe.recipeUserId.name}</h1>
+            <h1 className="uppercase">{recipe.recipeUserId.name}</h1>
           </div>
           <div className="flex flex-col justify-center">
             <div className="flex md:justify-end">
-              <p className=" text-gray-600 ml-4 md:col-span-2    ">
+              <p className=" text-gray-600 ml-4    ">
                 posted on :{" "}
                 {new Intl.DateTimeFormat("en-GB", {
                   day: "numeric",
@@ -56,32 +56,36 @@ export default function UserPostedRecipes() {
                 }).format(new Date(recipe.createdAt))}
               </p>
             </div>
-
-            <p className="text-black text-4xl text-center sm:text-center lg:text-center md:text-5xl font-serif pt-6  mb-4 mt-4     ">
-              {recipe.recipeName}
-            </p>
           </div>
+          <h2 className="text-black text-4xl md:text-5xl   mt-6 mb-6  ml-4 text-center uppercase font-semibold">
+            {recipe.recipeName}
+          </h2>
+          <div className="lg:grid lg:grid-cols-2">
+            <div className="flex justify-center items-center">
+              <img
+                src={recipe.recipeUrl}
+                alt={`${recipe.authorName}'s profile`}
+                className="sm:h-[300px] sm:sw-[300px] md:h-[350px] md:w-[350px] rounded-lg  m-6  sm:rounded-full lg:h-[400px] lg:w-[400px] lg:rounded-full"
+              />
+            </div>
 
-          <div className="flex justify-center items-center">
-            <img
-              src={recipe.recipeUrl}
-              alt={`${recipe.recipeName}`}
-              className=" w-[370px]  h-[370px] m-6  md:w-[500px] md:h-[500px]  p-2 md:p-0 mt-10 md:mt-0 rounded-full"
-            />
-          </div>
-
-          <div className="flext justify-center items-center">
-            <h1 className=" font-serif text-2xl text-wrap m-5">Description:</h1>
-            <h2 className="text-gray-700  font-serif text-xl text-wrap m-5">
-              {recipe.recipeDescription}
-            </h2>
-            <h1 className=" font-serif text-2xl text-wrap mt-4 ml-4">
-              Instructions:
-            </h1>
-            <h2 className="font-serif p-4 text-xl text-wrap text-gray-600 ">
-              {recipe.recipeInstruction}
-            </h2>
-            <h1 className="flex justify-end mr-9">— {recipe.authorName}</h1>
+            <div className="flext justify-center items-center">
+              <h1 className="    text-2xl text-wrap m-5 uppercase font-semibold">
+                Description:
+              </h1>
+              <h2 className="text-gray-700 sm:text-lg    md:text-xl text-wrap m-5">
+                {recipe.recipeDescription}
+              </h2>
+              <h1 className="  text-2xl text-wrap mt-4 ml-4 uppercase font-semibold">
+                Instructions:
+              </h1>
+              <h2 className="  p-4 text-xl text-wrap text-gray-600 ">
+                {recipe.recipeInstruction}
+              </h2>
+              <h1 className="flex justify-end mr-9 text-black font-bold">
+                — {recipe.authorName}
+              </h1>
+            </div>
           </div>
         </div>
       </div>

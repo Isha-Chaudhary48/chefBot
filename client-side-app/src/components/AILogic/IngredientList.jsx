@@ -2,8 +2,8 @@ export default function IngredientList(props) {
   return (
     <>
       {props.ingredientsArray.length > 0 && (
-        <div className="mt-14 h-auto w-full  flex justify-center flex-col items-center font-serif">
-          <h1 className=" text-xl sm:text-2xl font-serif mb-4 text-white  ">
+        <div className="mt-14 h-auto w-full  flex justify-center flex-col items-center     ">
+          <h1 className=" text-xl sm:text-2xl      mb-4 text-white  ">
             Ingredients on hand :
           </h1>
           {props.ingredientsArray.map((item, index) => (

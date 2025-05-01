@@ -15,7 +15,7 @@ export default function Footer() {
         className="contact w-screen h-[400px]   p-0 text-start mb-0 mt-16 font-sans grid grid-rows-2"
       >
         <div
-          className="bg-[#8c6240]  grid grid-cols-3  text-white  p-8 sm:p-12 justify-center align-bottom text-sm
+          className="bg-[#825d3f]  grid grid-cols-3  text-white  p-8 sm:p-12 justify-center align-bottom text-sm
         "
         >
           <div className="grid grid-rows-4 text-sm sm:text-lg   ">

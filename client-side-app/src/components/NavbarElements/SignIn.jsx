@@ -36,28 +36,21 @@ export function SignIn() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row ">
+      <div className="flex flex-col  justify-center items-center md:flex-row  ">
         {isAuthenticated ? (
           <button
-            className="relative sm:text-white sm:hover:text-[#fab668]  md:text-gray-600 md:hover:text-gray-800 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full"
+            className=" sm:hover:text-[#fab668] md:text-black  md:hover:text-gray-600 sm:text-white     "
             onClick={(e) => logout(e)}
           >
-            Logout
+            LOGOUT
           </button>
         ) : (
           <button
-            className="relative sm: text-white sm:hover:text-[#fab668] md:text-gray-600 md:hover:text-gray-800 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#4d361c] after:transition-all after:duration-300 hover:after:w-full"
+            className=" sm:hover:text-[#fab668] md:text-black md:hover:text-gray-600  sm:text-white    "
             onClick={(e) => loginWithRedirect(e)}
           >
-            SignIn
+            SIGN IN
           </button>
-        )}
-        {isAuthenticated && user && (
-          <img
-            className="h-12 rounded-[50%] z-50 bg-white mt-4 md:ml-4 md:mt-0"
-            src={user.picture}
-            alt="hello "
-          />
         )}
       </div>
     </>

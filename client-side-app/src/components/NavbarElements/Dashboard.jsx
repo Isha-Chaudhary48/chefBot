@@ -34,11 +34,6 @@ export default function Dashboard() {
     navigate("/createPost");
   }
   function navigateOnClick(recipe) {
-    if (!isAuthenticated || !user?.email) {
-      toast.error("please sign in first!");
-      return;
-    }
-
     // remaining ...
 
     navigate(`/userPostedRecipes/${recipe._id}`, { state: { recipe } });
@@ -56,9 +51,12 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className=" flex justify-center items-center rounded-md sm:h-[80px] w-[100%]  md:h-[80px] md:w-[180px] sm:mt-10 md:float-end lg:mt-10   mr-4 font-serif  mouse-pointer   ">
+      <div className=" flex justify-center items-center rounded-md sm:h-[80px] w-[100%]  md:h-[80px] md:w-[180px] sm:mt-10 md:float-end lg:mt-10   mr-4     mouse-pointer   ">
         <div className=" bg-white  rounded-md  p-2 text-xl flex justify-center">
-          <button className="p-2 " onClick={(e) => handleClick(e)}>
+          <button
+            className="p-2 uppercase font-semibold "
+            onClick={(e) => handleClick(e)}
+          >
             Create Post
           </button>
         </div>
@@ -105,29 +103,29 @@ export default function Dashboard() {
                     year: "numeric",
                   }).format(new Date(recipe.createdAt))}
                 </p>
-
-                <h2 className="text-black text-3xl font-serif md: mt-5  ml-4 text-center">
+                <h2 className="text-black text-3xl   mt-6 mb-6  ml-4 text-center uppercase font-semibold">
                   {recipe.recipeName}
                 </h2>
+                <div className="md:grid md:grid-cols-2">
+                  <div className="flex justify-center items-center">
+                    <img
+                      src={recipe.recipeUrl}
+                      alt={`${recipe.authorName}'s profile`}
+                      className="h-[300px] w-[300px]  m-6 md:h[400px] md:w-[400px] rounded-md"
+                    />
+                  </div>
 
-                <div className="flex justify-center items-center">
-                  <img
-                    src={recipe.recipeUrl}
-                    alt={`${recipe.authorName}'s profile`}
-                    className="h-[300px] w-[300px]  m-6 md:h[300px] md:w-[300px] rounded-mdssss"
-                  />
-                </div>
-
-                <div className="flext justify-center items-center">
-                  <h1 className="sm:text-lg font-serif md:text-2xl text-wrap m-5">
-                    Description:
-                  </h1>
-                  <h2 className="text-gray-700 sm:text-lg font-serif md:text-xl text-wrap m-5">
-                    {recipe.recipeDescription}
-                  </h2>
-                  <h1 className="flex justify-end mr-9">
-                    — {recipe.authorName}
-                  </h1>
+                  <div className="flext justify-center items-center">
+                    <h1 className="    text-2xl text-wrap m-5 uppercase font-semibold">
+                      Description:
+                    </h1>
+                    <h2 className="text-gray-700 sm:text-lg    md:text-xl text-wrap m-5">
+                      {recipe.recipeDescription}
+                    </h2>
+                    <h1 className="flex justify-end mr-9 text-black font-bold">
+                      — {recipe.authorName}
+                    </h1>
+                  </div>
                 </div>
               </div>
             </div>

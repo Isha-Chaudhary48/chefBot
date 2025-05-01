@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import video1 from "../../assets/video1.mp4";
 import { useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+import { toast } from "react-toastify";
 
 export function Recipe() {
   const navigate = useNavigate();
+  const { isAuthenticated } = useAuth0();
 
   const [searchMeal, setSearchMeal] = useState([]);
   const [inputVal, setInputVal] = useState("");
@@ -25,6 +28,10 @@ export function Recipe() {
   }, [query]);
 
   function handleClick() {
+    if (!isAuthenticated) {
+      toast.error("Sign In first!");
+      return;
+    }
     if (inputVal.trim() == "") return;
     setQuery(inputVal);
     setInputVal("");
@@ -70,8 +77,13 @@ export function Recipe() {
 
   return (
     <>
-      <div className="  flex justify-center items-center mt-8   ">
-        <h1 className="w-[70%] bg-[#825d3f] text-white font-serif p-8 text-xl sm:text-2xl rounded-md">
+      <div className="  flex flex-col gap-6 justify-center items-center mt-8   ">
+        <h1 className="w-[70%]  text-white     p-8 text-xl sm:text-2xl rounded-md">
+          Whether it’s cozy breakfast ideas or dreamy dinner plans, just type it
+          in. We’ll whisk up the perfect recipe, rich with flavor and ready to
+          impress—right on your screen
+        </h1>
+        <h1 className="w-[70%] bg-[#825d3f] text-white     p-8 text-xl sm:text-2xl rounded-md">
           Craving something delicious? Just type a dish name and unlock its
           secret recipe!
         </h1>
@@ -136,7 +148,7 @@ export function Recipe() {
               })}
             </div>
           ) : (
-            <div className="mt-12 mb-10 font-serif sm:text-2xl bg-[#825d3f] h-32 flex justify-center items-center p-4 rounded-md text-white">
+            <div className="mt-12 mb-10     sm:text-2xl bg-[#825d3f] h-32 flex justify-center items-center p-4 rounded-md text-white">
               <h1>
                 Can't find recipe then ask
                 <a
@@ -150,7 +162,7 @@ export function Recipe() {
           )}
         </div>
       )}
-      <div className="  h-[400px]  m-auto  mt-8 flex justify-center items-center  p-4 bg-gradient-to-r from-transparent via-gray-400/10 to-transparent rounded-lg">
+      <div className="  h-[400px]  m-auto sm:mt-28 md:mt-14 flex justify-center items-center  p-4 bg-gradient-to-r from-transparent via-gray-400/10 to-transparent rounded-lg z-10">
         <video
           className="h-[90%] w-auto rounded-md "
           // autoPlay

@@ -46,7 +46,7 @@ export default function UserAllRecipesSection() {
       ) : (
         <>
           {user && (
-            <div className=" p-4 mt-4 rounded-md shadow-md flex flex-col items-center">
+            <div className=" p-4 mt-4 rounded-md shadow-md flex flex-col items-center ">
               <img
                 src={
                   user.picture && user.picture.trim() !== ""
@@ -67,7 +67,7 @@ export default function UserAllRecipesSection() {
           {particularUserRecipes.map((recipe) => (
             <div
               key={recipe._id}
-              className="flex justify-center flex-col bg-white gap-7 p-10 mt-10 sm:w-[70%] md:w-[60%]  rounded-lg font-serif"
+              className="flex justify-center flex-col bg-white gap-7 p-10 mt-10 w-[88%] md:w-[60%]  rounded-lg    "
               onClick={() => navigateOnClick(recipe)}
             >
               <div className="flex justify-normal items-end mt-[-20px]">
@@ -80,17 +80,19 @@ export default function UserAllRecipesSection() {
                   }).format(new Date(recipe.createdAt))}
                 </p>
               </div>
-              <div className="text-3xl text-center">{recipe.recipeName}</div>
-              <div className="flex justify-center items-center">
+              <div className="text-3xl text-center uppercase font-semibold">
+                {recipe.recipeName}
+              </div>
+              <div className="flex justify-center items-center w-full">
                 <img
                   src={recipe.recipeUrl}
                   className="h-[400px] w-[400px] m-6 md:h-[400px] md:w-[400px] rounded-md"
                   alt={recipe.recipeName}
                 />
               </div>
-              <h1 className="text-2xl">Description:</h1>
-              <div className="text-xl">{recipe.recipeDescription}</div>
-              <div className="flex justify-end items-end">
+              <h1 className="text-2xl uppercase font-semibold">Description:</h1>
+              <div className="text-xl ">{recipe.recipeDescription}</div>
+              <div className="flex justify-end items-end text-black font-bold">
                 <h1> — {recipe.authorName}</h1>
               </div>
             </div>
