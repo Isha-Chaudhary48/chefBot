@@ -2,7 +2,10 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: ["Popins", "sans-serif"],
+      serifCustom: ["Merriweather", "serif"],
+    },
   },
   plugins: [],
 };
