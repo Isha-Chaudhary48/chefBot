@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <>
       <div className="flex h-20 w-[100vw] bg-white text-black       rounded-bl-sm font-normal shadow-[0_1px_3px_0_rgba(0,0,0,0.1),0_1px_2px_0_rgba(0,0,0,0.05),0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.8)] mb-20 ">
-        <div className=" flex  justify-start items-center    ml-3 p-2 text-2xl h-20 w-full mt-3">
+        <div className=" flex  justify-start items-center    ml-3 p-2 text-2xl h-20 w-full ">
           <img className="w-10 h-10 mr-2" src={chefIcon} alt="" />
           <span className="font-semibold">CHEF TABLE</span>
         </div>
@@ -44,8 +44,9 @@ export default function Navbar() {
         >
           {isOpen ? (
             <X
-              size={0}
+              size={32}
               ref={buttonRef}
+              onClick={() => setIsOpen(true)}
               className="z-50 fixed  text-white  right-32 top-[40px]  "
             />
           ) : (
@@ -53,7 +54,7 @@ export default function Navbar() {
           )}
         </button>
 
-        <div className="md:w-full   hidden md:grid grid-cols-5 md:text-[12px] lg:text-[16px] justify-center items-center h-20     gap-3 md:mt-3 text-center ">
+        <div className="md:w-full   hidden md:grid grid-cols-5 md:text-[12px] lg:text-[16px] justify-center items-center h-20     gap-3  text-center ">
           <Link to="/dashboard" className="  text-black hover:text-gray-600  ">
             DASHBOARD
           </Link>
