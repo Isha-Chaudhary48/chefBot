@@ -21,10 +21,12 @@ export default function Navbar() {
         setIsOpen(false);
       }
     };
-    window.addEventListener("click", handleClickOutside);
+    window.addEventListener("click", handleClickOutside, { capture: true });
 
     return () => {
-      window.removeEventListener("click", handleClickOutside);
+      window.removeEventListener("click", handleClickOutside, {
+        capture: true,
+      });
     };
   }, []);
   return (
@@ -36,21 +38,21 @@ export default function Navbar() {
         </div>
 
         <button
+          ref={buttonRef}
           onClick={(e) => {
             e.stopPropagation();
-            setIsOpen(true);
+            setIsOpen((prev) => !prev);
           }}
-          className="md:hidden"
+          className="md:hidden flex justify-center items-center mr-10"
         >
           {isOpen ? (
             <X
               size={32}
-              ref={buttonRef}
-              onClick={() => setIsOpen(true)}
-              className="z-50 fixed  text-white  right-32 top-[40px]  "
+              onClick={() => setIsOpen(false)}
+              className="z-50 text-center mt-10 md:mr-5  text-white fixed    "
             />
           ) : (
-            <Menu size={32} className="mr-[75px]" />
+            <Menu size={32} className="" />
           )}
         </button>
 
@@ -83,8 +85,8 @@ export default function Navbar() {
         {isOpen && (
           <div
             ref={menuRef}
-            className={` z-30pl-10 pr-10  fixed right-0 h-full sm:w-[24%] w-[34%]  text-white  flex flex-col justify-center items-center   md:hidden  bg-[#583f2b]
-            ${isOpen ? "ml-[20%]" : "ml-0"}`}
+            className={` z-30 pl-10 pr-10 fixed right-0 h-[100%] w-[40%] text-white  flex flex-col justify-center items-center   md:hidden  bg-[#4b3624]
+           `}
           >
             <div className=" fixed  h-full   text-white shadow-lg flex justify-center items-center  flex-col  gap-8 p-4">
               <Link

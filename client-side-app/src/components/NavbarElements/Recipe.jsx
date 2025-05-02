@@ -78,12 +78,12 @@ export function Recipe() {
   return (
     <>
       <div className="  flex flex-col gap-6 justify-center items-center mt-8   ">
-        <h1 className="w-[70%]  text-white     p-8 text-xl sm:text-2xl rounded-md">
+        <h1 className=" text-center w-[95%] md:w-[80%]  text-white     p-8 text-xl sm:text-2xl rounded-md">
           Whether it’s cozy breakfast ideas or dreamy dinner plans, just type it
           in. We’ll whisk up the perfect recipe, rich with flavor and ready to
           impress—right on your screen
         </h1>
-        <h1 className="w-[70%] bg-[#825d3f] text-white     p-8 text-xl sm:text-2xl rounded-md">
+        <h1 className="w-[90%] md:w-[70%] bg-[#825d3f] text-white text-center    p-8 text-xl sm:text-2xl rounded-md">
           Craving something delicious? Just type a dish name and unlock its
           secret recipe!
         </h1>
