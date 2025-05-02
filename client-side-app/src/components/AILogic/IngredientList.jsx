@@ -15,16 +15,16 @@ export default function IngredientList(props) {
           ))}
 
           {props.ingredientsArray && props.ingredientsArray.length > 0 && (
-            <div className="w-1/2 h-auto bg-[#825d3f] text-white p-8 sm:p-10 rounded-lg mt-16 mb-8">
+            <div className="w-[80%]  h-auto bg-[#825d3f] text-white p-8 sm:p-10 rounded-lg mt-16 mb-8">
               <h1 className="sm:text-xl font-black">Ready for a recipe?</h1>
               <button
                 onClick={props.getAiResponse}
-                className="sm:h-auto  bg-white rounded-lg text-black font-semibolds p-1  sm:p-2 float-right mt-2 "
+                className="sm:h-auto  bg-white rounded-lg text-black font-semibolds p-1  sm:p-4 float-right mt-2 "
               >
                 Get Recipe
               </button>
 
-              <div className="mt-10 text-md sm:text-lg ">
+              <div className="mt-12 text-md sm:text-lg ">
                 Generate a recipe from your list of ingredients
               </div>
             </div>
@@ -37,7 +37,7 @@ export default function IngredientList(props) {
                   Loading...
                 </h1>
               ) : (
-                <div className="bg-white flex justify-center items-center flex-col w-2/3 p-10 rounded-sm">
+                <div className="bg-white flex justify-center items-center flex-col w-[90%] md:w-2/3 p-10 rounded-sm">
                   <h1 className="text-2xl font-bold mb-3">レシピ (Recipe)</h1>
                   <h2 className="flex justify-center items-center flex-col ">
                     {props.aiResponse}

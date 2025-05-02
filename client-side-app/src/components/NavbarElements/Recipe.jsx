@@ -109,21 +109,21 @@ export function Recipe() {
       </div>
 
       {contentVisible && (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center ">
           {searchMeal?.meals?.length > 0 ? (
-            <div className=" grid  grid-cols-2 sm:grid-cols-4 gap-8 justify-center text-center align-middle items-center p-16 h-auto w-auto text-black ">
+            <div className=" grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center text-center align-middle items-center p-16 h-auto w-auto text-black ">
               {searchMeal.meals.map((item, index) => {
                 console.log("item", item);
                 return (
                   <>
                     <div>
                       <div
-                        className="hover: scale-95 ease-in-out duration-100"
+                        className="hover: scale-100 ease-in duration-100"
                         key={item.idMeal + index}
                       >
                         <img
                           key={item.idMeal}
-                          className="rounded-md transition-transform duration-200 ease-in-out hover:scale-110 "
+                          className="rounded-md transition-transform duration-250 ease-in-out hover:scale-105 sm:w-[300px] sm:h-[300px] md:h-auto md:w-auto "
                           src={item.strMealThumb}
                           alt=""
                           onClick={() =>
@@ -138,7 +138,10 @@ export function Recipe() {
                           }
                         />
 
-                        <h1 className="font-semibold p-4 text-lg text-white">
+                        <h1
+                          className="font-semibold p-4 text-lg  text-white text-center
+                        "
+                        >
                           {item.strMeal}
                         </h1>
                       </div>
