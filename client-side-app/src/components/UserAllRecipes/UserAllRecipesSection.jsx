@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import dummyProfile from "../../assets/dummyProfile.png";
+import serverURI from "../../../serverURI";
 
 export default function UserAllRecipesSection() {
   const location = useLocation();
@@ -10,9 +11,7 @@ export default function UserAllRecipesSection() {
 
   useEffect(() => {
     if (recipe?.recipeUserId) {
-      fetch(
-        `https://chef-bot-frontend.vercel.app/usersProfile/${recipe.recipeUserId._id}`
-      )
+      fetch(`${serverURI}/usersProfile/${recipe.recipeUserId._id}`)
         .then((res) => {
           if (!res.ok) {
             throw new Error(

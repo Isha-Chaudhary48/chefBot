@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import dummyProfile from "../../assets/dummyProfile.png";
+import serverURI from "../../../serverURI";
 
 export default function Dashboard() {
   const { user, isAuthenticated } = useAuth0();
@@ -11,7 +12,7 @@ export default function Dashboard() {
 
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("https://chef-bot-frontend.vercel.app/postedRecipes")
+    fetch(`${serverURI}/postedRecipes`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
