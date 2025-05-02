@@ -7,7 +7,7 @@ function MealRecipe() {
   if (!meal) return <h1>No meal data avaliable</h1>;
   return (
     <div className="flex justify-center items-center flex-col sm:p-10     ">
-      <h1 className="text-xl text-center sm:text-3xl text-white font-semibold">
+      <h1 className="text-xl text-center sm:text-3xl text-wrap text-white font-semibold sm:p-3 md:p-0">
         {meal.name} ({meal.area})
       </h1>
 
