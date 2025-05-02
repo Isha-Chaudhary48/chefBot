@@ -63,7 +63,7 @@ export default function Dashboard() {
       </div>
 
       <div className="flex justify-center items-center flex-col gap-20  mt-24 gap- lg:mt-10 p-4 ">
-        {!userInfo ? (
+        {userInfo.length === 0 ? (
           <div className="text-white text-xl ">Loading...</div>
         ) : (
           userInfo.map((recipe, index) => (
