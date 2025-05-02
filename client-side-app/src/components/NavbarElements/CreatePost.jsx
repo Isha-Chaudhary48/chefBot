@@ -63,7 +63,7 @@ export default function CreatePost() {
   return (
     <>
       <div className="flex justify-center items-center flex-col h-[100vh] mt-20">
-        <div className="flex flex-col gap-10 justify-center  bg-white p-20 rounded-md h-auto sm:w-[55%] md:w-[60%]">
+        <div className="flex flex-col gap-10 justify-center  bg-white p-20 rounded-md h-auto w-[70vw] md:w-[60%]">
           <h1 className="text-center text-3xl font-semibold">
             Share Your Delicious Creation
           </h1>
