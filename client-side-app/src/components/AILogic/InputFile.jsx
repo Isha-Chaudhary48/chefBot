@@ -51,9 +51,9 @@ export default function InputFile(props) {
           Type your favorite ingredient, and let AI find a recipe for you!
         </h1>
       </div>
-      <form className="flex justify-center items-center align-bottom  gap-3 mt-16 flex-col sm:flex-row md:flex-row lg:flex-row   ">
+      <form className="flex justify-center items-center align-bottom  gap-3 mt-16 flex-col  md:flex-row    ">
         <input
-          className="rounded-md border border-gray-300 p-2 shadow-sm flex-grow  md:w-12 lg:w-20 "
+          className="h-[40px] w-[50%]  rounded-md  p-2"
           type="text"
           name="inputName"
           value={inputIngredient}

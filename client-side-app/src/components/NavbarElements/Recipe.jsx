@@ -91,7 +91,7 @@ export function Recipe() {
 
       <div className="flex justify-center items-center mt-10 ">
         <input
-          className="h-[40px] w-[40%]  rounded-md  p-2"
+          className="h-[40px] w-[50%]  rounded-md  p-2"
           type="text"
           name=""
           id=""
