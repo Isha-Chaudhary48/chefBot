@@ -28,7 +28,7 @@ export default function InputFile(props) {
   return (
     <>
       <div className="  flex flex-col justify-center items-center mt-8  gap-5  ">
-        <h1 className="w-1/2  text-white      p-6 sm:p-8  text-lg  sm:text-xl md:text-2xl lg:text-2xl rounded-md">
+        <h1 className="w-1/2  text-white      p-5 sm:p-7  text-lg  sm:text-xl md:text-2xl lg:text-2xl rounded-md">
           Stuck with a few ingredients and no recipe in sight? ChefBot’s got
           your back—just enter what’s in your kitchen, and I’ll serve you a
           delicious, custom-made recipe in seconds. 🍽️✨ No stress, no
