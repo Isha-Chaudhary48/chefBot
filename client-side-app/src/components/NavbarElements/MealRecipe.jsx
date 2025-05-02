@@ -12,6 +12,7 @@ function MealRecipe() {
       </h1>
 
       <img
+        loading="lazy"
         className="w-[60%] md:w-[45%] lg:w-[30%] mt-8 rounded-lg mb-4"
         src={meal.image}
         alt=""

@@ -30,6 +30,7 @@ export default function UserPostedRecipes() {
             }}
           >
             <img
+              loading="lazy"
               src={
                 recipe.recipeUserId.picture &&
                 recipe.recipeUserId.picture.trim() !== ""

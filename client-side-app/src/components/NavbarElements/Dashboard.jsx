@@ -76,6 +76,7 @@ export default function Dashboard() {
                 onClick={() => userRecipesOnClick(recipe)}
               >
                 <img
+                  loading="lazy"
                   src={
                     recipe.recipeUserId.picture &&
                     recipe.recipeUserId.picture.trim() !== ""

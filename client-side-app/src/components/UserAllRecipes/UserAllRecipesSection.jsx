@@ -48,6 +48,7 @@ export default function UserAllRecipesSection() {
           {user && (
             <div className=" p-4 mt-4 rounded-md shadow-md flex flex-col items-center ">
               <img
+                loading="lazy"
                 src={
                   user.picture && user.picture.trim() !== ""
                     ? recipe.recipeUserId.picture
