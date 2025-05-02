@@ -11,7 +11,7 @@ export default function Dashboard() {
 
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:3000/postedRecipes")
+    fetch("https://chef-bot-frontend.vercel.app/postedRecipes")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

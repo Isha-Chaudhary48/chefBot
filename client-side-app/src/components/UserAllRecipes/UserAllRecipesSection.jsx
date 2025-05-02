@@ -10,7 +10,9 @@ export default function UserAllRecipesSection() {
 
   useEffect(() => {
     if (recipe?.recipeUserId) {
-      fetch(`http://localhost:3000/usersProfile/${recipe.recipeUserId._id}`)
+      fetch(
+        `https://chef-bot-frontend.vercel.app/usersProfile/${recipe.recipeUserId._id}`
+      )
         .then((res) => {
           if (!res.ok) {
             throw new Error(
