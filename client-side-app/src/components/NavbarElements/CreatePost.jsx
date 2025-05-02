@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
+import serverURI from "../../../serverURI";
 
 export default function CreatePost() {
   const { user, isAuthenticated } = useAuth0();
@@ -14,7 +15,7 @@ export default function CreatePost() {
 
   useEffect(() => {
     if (isAuthenticated && user?.email) {
-      fetch("http://localhost:3000/users")
+      fetch(`${serverURI}/users`)
         .then((res) => res.json())
         .then((data) => {
           const userData = data.find((u) => user.email == u.email);
@@ -36,7 +37,7 @@ export default function CreatePost() {
       recipeUserId: currentUser,
     };
 
-    fetch("http://localhost:3000/createPost", {
+    fetch(`${serverURI}/createPost`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

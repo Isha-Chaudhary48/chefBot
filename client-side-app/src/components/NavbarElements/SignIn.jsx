@@ -1,5 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useRef } from "react";
+import serverURI from "../../../serverURI";
 export function SignIn() {
   const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0();
   const hasPostedUser = useRef(false);
@@ -11,7 +12,7 @@ export function SignIn() {
       picture: user.picture,
     };
 
-    fetch("http://localhost:3000/user", {
+    fetch(`${serverURI}/user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

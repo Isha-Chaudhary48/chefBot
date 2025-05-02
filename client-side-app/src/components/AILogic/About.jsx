@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InputFile from "./InputFile";
+import serverURI from "../../../serverURI";
 
 import IngredientList from "./IngredientList";
 
@@ -11,7 +12,7 @@ export function About() {
   const getAiResponse = async () => {
     setShowContent(true);
     try {
-      const response = await fetch("http://localhost:3000/chefBot", {
+      const response = await fetch(`${serverURI}/chefBot`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
