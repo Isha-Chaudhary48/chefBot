@@ -8,7 +8,7 @@ const router = express.Router();
 router.post("/chefBot", async (req, res) => {
   try {
     const ingredients = req.body.ingredients;
-    const aiResponse = await geminiAi(ingredients.join(","));
+    const aiResponse = await geminiAi(ingredients.join(" "));
     res.json({ aiResponse: aiResponse });
   } catch (error) {
     console.log("error in Ai processing request", error);
