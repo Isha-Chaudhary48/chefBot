@@ -40,11 +40,6 @@ export default function Dashboard() {
     navigate(`/userPostedRecipes/${recipe._id}`, { state: { recipe } });
   }
   function userRecipesOnClick(recipe) {
-    if (!isAuthenticated || !user?.email) {
-      toast.error("please sign in first!");
-      return;
-    }
-
     navigate(`/userAllRecipes/${recipe.recipeUserId._id}`, {
       state: { recipe },
     });
@@ -65,7 +60,7 @@ export default function Dashboard() {
 
       <div className="flex justify-center items-center flex-col gap-20  mt-24 gap- lg:mt-10 p-4 ">
         {userInfo.length === 0 ? (
-          <div className="text-white text-3xl text-center h-[40vh] ">
+          <div className="text-white text-3xl text-center h-[50vh] ">
             Loading...
           </div>
         ) : (
