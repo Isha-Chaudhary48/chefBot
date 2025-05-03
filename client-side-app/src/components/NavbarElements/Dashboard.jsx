@@ -65,7 +65,9 @@ export default function Dashboard() {
 
       <div className="flex justify-center items-center flex-col gap-20  mt-24 gap- lg:mt-10 p-4 ">
         {userInfo.length === 0 ? (
-          <div className="text-white text-xl ">Loading...</div>
+          <div className="text-white text-3xl text-center h-[40vh] ">
+            Loading...
+          </div>
         ) : (
           userInfo.map((recipe, index) => (
             <div
@@ -113,7 +115,7 @@ export default function Dashboard() {
                     <img
                       src={recipe.recipeUrl}
                       alt={`${recipe.authorName}'s profile`}
-                      className="h-[300px] w-[300px]  m-6 md:h[400px] md:w-[400px] rounded-md"
+                      className="object-cover overflow-hidden h-[300px] w-[300px]  m-6 md:h[400px] md:w-[400px] rounded-md"
                     />
                   </div>
 

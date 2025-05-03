@@ -42,7 +42,7 @@ export default function UserPostedRecipes() {
                 e.target.onerror = null;
                 e.target.src = profilePicture;
               }}
-              className="rounded-full h-12 w-12 "
+              className="rounded-full h-12 w-12"
             />
             <h1 className="uppercase">{recipe.recipeUserId.name}</h1>
           </div>
@@ -58,7 +58,7 @@ export default function UserPostedRecipes() {
               </p>
             </div>
           </div>
-          <h2 className="text-black text-4xl md:text-5xl   mt-6 mb-6  ml-4 text-center uppercase font-semibold">
+          <h2 className="text-black text-3xl md:text-5xl   mt-6 mb-6  ml-4 text-center uppercase font-semibold">
             {recipe.recipeName}
           </h2>
           <div className="lg:grid lg:grid-cols-2">
@@ -66,7 +66,7 @@ export default function UserPostedRecipes() {
               <img
                 src={recipe.recipeUrl}
                 alt={`${recipe.authorName}'s profile`}
-                className="sm:h-[300px] sm:sw-[300px] md:h-[350px] md:w-[350px] rounded-lg  m-6  sm:rounded-full lg:h-[400px] lg:w-[400px] lg:rounded-full"
+                className="object-cover overflow-hidden h-[400px] w-[400px]  m-6 md:h[400px] md:w-[400px] sm:rounded-full md:rounded-full lg:rounded-md"
               />
             </div>
 
@@ -74,7 +74,7 @@ export default function UserPostedRecipes() {
               <h1 className="    text-2xl text-wrap m-5 uppercase font-semibold">
                 Description:
               </h1>
-              <h2 className="text-gray-700 sm:text-lg    md:text-xl text-wrap m-5">
+              <h2 className="text-gray-700 sm:text-xl    md:text-xl text-wrap m-5">
                 {recipe.recipeDescription}
               </h2>
               <h1 className="  text-2xl text-wrap mt-4 ml-4 uppercase font-semibold">

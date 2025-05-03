@@ -41,8 +41,8 @@ export default function UserAllRecipesSection() {
   return (
     <div className="flex justify-center items-center flex-col">
       {particularUserRecipes.length === 0 ? (
-        <div className="flex justify-center items-center text-white">
-          No Recipe of this user found
+        <div className="flex justify-center items-center text-white text-3xl h-[60vh]">
+          Loading...
         </div>
       ) : (
         <>
@@ -88,7 +88,7 @@ export default function UserAllRecipesSection() {
               <div className="flex justify-center items-center w-full">
                 <img
                   src={recipe.recipeUrl}
-                  className="h-[400px] w-[400px] m-6 md:h-[400px] md:w-[400px] rounded-md"
+                  className="object-cover overflow-hidden h-[300px] w-[400px]   m-6 md:h[400px] md:w-[400px] rounded-md"
                   alt={recipe.recipeName}
                 />
               </div>

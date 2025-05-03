@@ -8,7 +8,7 @@ export default function IngredientList(props) {
           </h1>
           {props.ingredientsArray.map((item, index) => (
             <ul key={index} className=" h-auto w-1/2  rounded-lg mt-4">
-              <li className="list-none bg-white text-black-500 mt-2 h-10 sm:min-w-72 sm: max-w-auto rounded-md text-center align-middle p-2  ">
+              <li className=" h-auto list-none bg-white text-black-500 mt-2 sm:min-w-72 sm: max-w-auto rounded-md text-center align-middle p-2  ">
                 {item}
               </li>
             </ul>
