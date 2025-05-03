@@ -69,7 +69,7 @@ export default function UserAllRecipesSection() {
           {particularUserRecipes.map((recipe) => (
             <div
               key={recipe._id}
-              className="flex justify-center flex-col bg-white gap-7 p-10 mt-10 w-[88%] md:w-[60%]  rounded-lg    "
+              className="flex justify-center flex-col bg-white gap-7 p-10 mt-10 w-[90%] md:w-[60%]  rounded-lg    "
               onClick={() => navigateOnClick(recipe)}
             >
               <div className="flex justify-normal items-end mt-[-20px]">
@@ -88,7 +88,7 @@ export default function UserAllRecipesSection() {
               <div className="flex justify-center items-center w-full">
                 <img
                   src={recipe.recipeUrl}
-                  className="object-cover overflow-hidden h-[300px] w-[400px]   m-6 md:h[400px] md:w-[400px] rounded-md"
+                  className="object-cover overflow-hidden h-[400px] w-[400px] md:m-6   md:h[400px] md:w-[400px] rounded-md"
                   alt={recipe.recipeName}
                 />
               </div>

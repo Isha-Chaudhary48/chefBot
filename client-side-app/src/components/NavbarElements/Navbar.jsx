@@ -47,7 +47,7 @@ export default function Navbar() {
         >
           {isOpen ? (
             <X
-              size={32}
+              size={0}
               onClick={() => setIsOpen(false)}
               className="z-50 text-center mt-10 md:mr-5  text-white fixed    "
             />
