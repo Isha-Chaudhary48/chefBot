@@ -2,40 +2,15 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+console.log();
 
-async function isCookingRelated(input) {
-  try {
-    const classifyPrompt = `
-okay now i'll give you certain words and you have to tell me whether its cooking realated or not you only have to give response in one world and there should not be extra word in your response only one word
-
-Message: ${input}
-
-  `;
-    const result = await model.generateContent(classifyPrompt);
-    const topic = result.response.text().trim().toLowerCase();
-    console.log("input", input);
-    console.log("topic", topic);
-    return topic;
-  } catch (error) {
-    console.error("Error in classification prompt:", error);
-    return "non-cooking"; // fallback to deny if AI fails
-  }
-}
 export default async function geminiAi(ingredients) {
   try {
-    const classification = await isCookingRelated(ingredients);
-    console.log("classification", classification);
-
-    if (classification !== "cooking") {
-      return "non-cooking";
-    }
-    if (classification === "cooking") {
-      const prompt = `Suppose you are Michelin star chef. Give two recipes which are simple to make in bullet points  (5–6 steps each). If the input is a dish name, provide two recipes for that dish only if its about non-cooking return result that please write ingredients of hte recipe : ${ingredients}`;
-      const result = await model.generateContent(prompt);
-      return result.response.text();
-    }
+    const prompt = `suppose you are a Michelin star chef give  two recipes which are simple to make and give them in bullet points only in 5-6 points or if they give a name of food please give its recipe both the recipe should be about that food only: ${ingredients}`;
+    const result = await model.generateContent(prompt);
+    console.log(result.response.text());
+    return result.response.text();
   } catch (error) {
-    console.log("error in fetching data from AI");
-    return "Sorry, something went wrong while processing your request.";
+    console.log("error in fetching data", error);
   }
 }
