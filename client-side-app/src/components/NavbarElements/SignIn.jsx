@@ -40,14 +40,14 @@ export function SignIn() {
       <div className="flex flex-col  justify-center items-center md:flex-row  ">
         {isAuthenticated ? (
           <button
-            className=" sm:hover:text-[#fab668] md:text-black  md:hover:text-gray-600 sm:text-white     "
+            className=" sm:hover:text-[#fab668] md:text-black  md:hover:text-[#583f2b] sm:text-white     "
             onClick={(e) => logout(e)}
           >
             LOGOUT
           </button>
         ) : (
           <button
-            className=" sm:hover:text-[#fab668] md:text-black md:hover:text-gray-600  sm:text-white    "
+            className=" sm:hover:text-[#fab668] md:text-black md:hover:text-[#583f2b] sm:text-white    "
             onClick={(e) => loginWithRedirect(e)}
           >
             SIGN IN

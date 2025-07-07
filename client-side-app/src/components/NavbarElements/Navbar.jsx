@@ -56,16 +56,16 @@ export default function Navbar() {
           )}
         </button>
 
-        <div className="md:w-full   hidden md:grid grid-cols-5 md:text-[12px] lg:text-[16px] justify-center items-center h-20     gap-3  text-center ">
-          <Link to="/dashboard" className="  text-black hover:text-gray-600  ">
+        <div className="md:w-full   hidden md:grid grid-cols-5 md:text-[13px] lg:text-[16px] justify-center items-center h-20     gap-3  text-center hover:text-gray-800   ">
+          <Link to="/dashboard" className="  text-black hover:text-[#583f2b]  ">
             DASHBOARD
           </Link>
-          <Link to="/chefBot" className=" text-black hover:text-gray-600    ">
+          <Link to="/chefBot" className=" text-black hover:text-[#583f2b]   ">
             CHEFBOT
           </Link>
           <Link
             to="/recipe"
-            className="relative  text-black hover:text-gray-600     "
+            className="relative  text-black hover:text-[#583f2b]    "
           >
             RECIPES
           </Link>
