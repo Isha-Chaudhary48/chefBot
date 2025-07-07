@@ -46,7 +46,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className=" flex justify-center items-center rounded-md sm:h-[80px] w-[100%]  md:h-[80px] md:w-[180px] sm:mt-10 md:float-end lg:mt-10   mr-4     mouse-pointer   ">
+      <div className=" flex justify-center items-center rounded-md sm:h-[80px] w-[100%] sm:mt-10 md:float-end lg:mt-10   mr-4     mouse-pointer mb-10   ">
         <div className=" bg-white  rounded-md  p-2 text-xl flex justify-center">
           <button
             className="p-2 uppercase font-semibold "
