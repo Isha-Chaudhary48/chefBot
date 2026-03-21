@@ -38,7 +38,7 @@ export function Recipe() {
     setContentVisible(true);
   }
 
-  console.log("search Meal", searchMeal);
+
   function handleKeyDown(e) {
     if (e.key === "Enter") {
       e.preventDefault();
@@ -73,7 +73,7 @@ export function Recipe() {
       },
     });
   }
-  console.log(imageOnclickRecipe);
+
 
   return (
     <>
@@ -113,7 +113,7 @@ export function Recipe() {
           {searchMeal?.meals?.length > 0 ? (
             <div className=" grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center text-center align-middle items-center p-16 h-auto w-auto text-black ">
               {searchMeal.meals.map((item, index) => {
-                console.log("item", item);
+              
                 return (
                   <>
                     <div>
