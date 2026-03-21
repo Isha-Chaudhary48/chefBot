@@ -7,8 +7,10 @@ import connectDB from "./dbConnection.js";
 
 dotenv.config({path:'../.env'});
 const app = express();
+
 app.use(express.json());
 app.use(cors());
+
 connectDB();
 
 app.use("/", recipeRoutes);
