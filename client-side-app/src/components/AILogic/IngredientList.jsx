@@ -40,7 +40,7 @@ export default function IngredientList(props) {
               ) : (
                 <div className="bg-white flex justify-center items-center flex-col w-[90%] md:w-2/3 p-10 rounded-sm">
                   <h1 className="text-2xl font-bold mb-3">レシピ (Recipe)</h1>
-                  <h2 className="flex justify-center items-center flex-col ">
+                  <h2 className="flex justify-center items-center flex-col md:text-lg  ">
                     <div dangerouslySetInnerHTML={{ __html: marked(props.aiResponse || '') }} />
                     <p className="text-2xl font-bold mb-3 mt-2">Bon appétit!</p>
                   </h2>
